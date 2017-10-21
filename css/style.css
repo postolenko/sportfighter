@@ -263,10 +263,22 @@ a:active {
 
 .header-row-1 .col-2 {
     width: 48%;
+    padding: 0 1%;
 }
 
 .header-row-1 .col-3 {
     width: 33%;
+}
+
+.respmenubtn-block {
+    display: none;
+    position: fixed;
+    top: 5px;
+    right: 0;
+    width: 14%;
+    padding: 0 2% 0 0;
+    text-align: right;
+    z-index: 13;
 }
 
 .header-row-2 {
@@ -289,7 +301,7 @@ a:active {
     text-align: right;
 }
 
-.logo {
+.logo-block {
     display: inline-block;
     vertical-align: top;
     width: 100%;
@@ -297,11 +309,15 @@ a:active {
     margin: 12px 0 0 0;
 }
 
-.logo img {
+.logo-block img {
     display: block;
     width: auto;
     height: auto;
     max-width: 100%;
+}
+
+.logo-block img.logo-resp {
+    display: none;
 }
 
 .title-block {
@@ -362,7 +378,6 @@ a:active {
     /*display: block;*/
     display: inline-block;
     vertical-align: top;
-    /*width: 38%;*/
     width: 218px;
     height: 200px;
     padding-top: 62px;
@@ -372,38 +387,6 @@ a:active {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-/*.header-contacts:before {
-    display: block;
-    content: "";
-    width: 43px;
-    height: 67px;
-    position: absolute;
-    top: -64px;
-    left: 16px;
-    background-image: url(../img/shape.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-.header-contacts:after {
-    display: block;
-    content: "";
-    width: 43px;
-    height: 67px;
-    position: absolute;
-    top: -64px;
-    right: 16px;
-    background-image: url(../img/shape.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}*/
-
-.contacts-list {
-
 }
 
 .contacts-list li {
@@ -448,18 +431,15 @@ a:active {
 .contacts-list li a:link,
 .contacts-list li a:visited {
      color: #241404;
-     /*border-bottom: 1px solid transparent;*/
 }
 
 .contacts-list li a:active,
 .contacts-list li a.active {
      color: #ffffff;
-     /*border-bottom: 1px solid #ffffff;*/
 }
 
 .contacts-list li a:hover {
      color: #ffffff;
-     /*border-bottom: 1px solid #ffffff;*/
 }
 
 .tel-icon {
@@ -509,7 +489,6 @@ a:active {
 .contacts-block {
     display: inline-block;
     vertical-align: top;
-    /*width: 49%;*/
     width: 276px;
     height: 200px;
     padding-top: 62px;
@@ -543,6 +522,7 @@ p.small-p {
 }
 
 .shop-slider-block {
+    width: 100%;
     margin: 3px 0 0 0;
 }
 
@@ -596,6 +576,120 @@ p.small-p {
     -moz-text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
     text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
 }
+
+/* ----- Responsive Menu Button ------ */
+
+.respmenubtn {
+    display: inline-block;
+    vertical-align: top;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid transparent;
+
+    -webkit-transition-property: background;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: background;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: background;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: background;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: background;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.respmenubtn span {
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: #ffffff;
+    margin: 0 auto 4px auto;
+
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+
+}
+
+.respmenubtn span:last-child {
+    margin: 0 auto;
+}
+
+.respmenubtn span:last-child {
+    margin: 0 auto;
+}
+
+.respmenubtn:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
+}
+
+.respmenubtn:hover span {
+    background: #ffffff;
+}
+
+.respmenubtn.active span {
+    position: relative;
+    width: 29px;
+    top: -1px;
+    left: 0;
+    background: #ffffff;
+}
+
+.respmenubtn.active span:first-child {
+    top: 4px;
+    left: -1px;
+}
+
+.respmenubtn.active span:last-child {
+    display: none;
+}
+
+.respmenubtn.active span:first-child {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: relative;
+    top: 4px;
+    left: -1px;
+}
+
+.respmenubtn.active span:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* ----- / Responsive Menu Button ------ */
 
 .main-nav {
     background: rgb(0, 155, 254);

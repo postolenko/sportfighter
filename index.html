@@ -16,7 +16,6 @@
 	<script type="text/javascript" src="slick/slick.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
-	
 	<title></title>
 	
 
@@ -25,7 +24,6 @@
 <body>
 
 <div class="wrapper">
-
 
 	<!-- Header -->
 
@@ -37,8 +35,9 @@
 				
 				<div class="header-row-1 clearfix">
 					<div class="col col-1 left">
-						<a href="#" class="logo">
-							<img src="img/logo.png" alt="" />
+						<a href="#" class="logo-block">
+							<img class="logo" src="img/logo.png" alt="" />
+							<img class="logo-resp" src="img/logo_resp.png" alt="" />
 						</a>
 					</div>
 					<div class="col col-2 left">
@@ -48,13 +47,13 @@
 						<div class="contacts-wrapp clearfix">
 							<div class="header-contacts contacts-list-block">
 								<ul class="contacts-list">
-									<li><i class="tel-icon"></i><a href="tel:88127027373">8 (812) 702-73-73</a></li>
-									<li><i class="tel-icon"></i><a href="tel:88129500977">8 (812) 950-09-77</a></li>
+									<li class="resp-contact"><i class="tel-icon"></i><a href="tel:88127027373">8 (812) 702-73-73</a></li>
+									<li class="resp-contact"><i class="tel-icon"></i><a href="tel:88129500977">8 (812) 950-09-77</a></li>
 									<li><i class="tel-icon"></i><a href="tel:88129500977">8 (812) 950-09-77</a></li>
 									<li><i class="wp-icon"></i><a href="#">WhatsApp</a></li>
 								</ul>
 							</div>
-							<div class="header-contacts">
+							<div class="header-contacts header-contacts_2">
 								<div class="contacts-block">
 									<p class="small-p">Санкт-Петербург, Лиговский пр. 3</p>
 									<p><i class="clock-icon"></i>Время работы:</p>
@@ -82,9 +81,17 @@
 							</div>
 						</div>
 					</div>
+					<div class="respmenubtn-block">
+						<button type="button" class="respmenubtn">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
 				</div>
 
-				<div class="header-row-2 clearfix">
+				<div class="header-row-2 resp-nav clearfix scroll">
+					<div class="append-elem" data-append-elem = "2" ></div>
 					<div class="col col-1 left">
 						<div class="main-nav-block">
 							<ul class="main-nav offset-ziro">
@@ -100,14 +107,17 @@
 						</div>
 					</div>
 					<div class="col col-2 left">
-						<div class="search-block">
-							<form>
-								<input type="text">
-								<button type="submot" class="search-btn"></button>
-							</form>
+						<div class="desktop-position append-elem"  data-append-descktop-elem = "2" data-min-screen = "768">
+							<div class="search-block">
+								<form>
+									<input type="text">
+									<button type="submot" class="search-btn"></button>
+								</form>
+							</div>
 						</div>
+						<div class="append-elem append-elem_1" data-append-elem = "1" ></div>
 					</div>
-					<div class="col col-3 left">
+					<div class="col col-3 left desktop-position append-elem"  data-append-descktop-elem = "1" data-min-screen = "1240">
 						<a href="#" class="basket">
 							<p>0.00 руб.</p>
 							<div class="icon-box">
