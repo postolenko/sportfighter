@@ -383,10 +383,10 @@ a:active {
     padding-top: 62px;
     position: relative;
     z-index: 2;
-    background-image: url(../img/desk_1_.png);
+    background-image: url(../img/desk_1.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 .contacts-list li {
@@ -495,10 +495,10 @@ a:active {
     text-align: center;
     position: relative;
     z-index: 2;
-    background-image: url(../img/desk_2_.png);
+    background-image: url(../img/desk_2.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 .contacts-block p {
